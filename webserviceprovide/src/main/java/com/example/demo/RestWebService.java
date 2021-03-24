@@ -1,10 +1,13 @@
 package com.example.demo;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @RestController
 public class RestWebService {
@@ -25,5 +28,14 @@ public class RestWebService {
 	public int areaOfrect(@RequestParam("length") int a, @RequestParam("breadth") int b) {
 		int area=a * b;
 		return area;
+	}
+	
+	// http://localhost/jsonReqMul
+	@RequestMapping(value = "/jsonReqMul", method = RequestMethod.POST, 
+			consumes = MediaType.APPLICATION_JSON_VALUE)
+	public int mulCalculator(@RequestBody Input in) {
+		// "Input" parameter is json compliant java program
+		int mul=in.param1 * in.param2  ;
+		return mul;
 	}
 }
