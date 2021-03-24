@@ -20,4 +20,10 @@ public class RestWebService {
 		int sub=a - b;
 		return sub;
 	}
+	
+	@RequestMapping(value = "/areaOfrect", method = RequestMethod.POST)
+	public int areaOfrect(@RequestParam("length") int a, @RequestParam("breadth") int b) {
+		int area=a * b;
+		return area;
+	}
 }
