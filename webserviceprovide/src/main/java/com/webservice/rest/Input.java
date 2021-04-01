@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.webservice.rest;
 
 public class Input {
 	public int param1;

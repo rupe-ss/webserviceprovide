@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.webservice.soap;
 
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding.Style;

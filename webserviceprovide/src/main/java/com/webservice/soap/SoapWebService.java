@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.webservice.soap;
 
 import javax.xml.ws.Endpoint;
 
